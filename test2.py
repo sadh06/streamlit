@@ -246,12 +246,11 @@ def app():
     
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
-        #functions.unzip_files(uploaded_file)
-        # with zipfile.ZipFile(uploaded_file, 'r') as zip_ref:
-        #     zip_ref.extractall()
+        functions.unzip_files(uploaded_file)
+         with zipfile.ZipFile(uploaded_file, 'r') as zip_ref:
+             zip_ref.extractall()
         data = uploaded_file.getvalue()
         print(data)
-        coeff_file = open('inference/coeff.json',"r")
         filename= os.path.splitext(filename)[0]
         print(filename)
         #print(uploaded_file)
