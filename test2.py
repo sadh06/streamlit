@@ -6,7 +6,6 @@ import os
 from streamlit.components.v1 import html
 import time
 warnings.filterwarnings("ignore")
-import functions
 import pandas
 
 
